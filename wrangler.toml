@@ -1,0 +1,20 @@
+name = "photos-ai-studio-remove-user-account"
+main = "worker.ts"
+compatibility_date = "2023-05-18"
+
+[vars]
+SUPABASE_URL = "https://rpogrokqnyrauxkfwqil.supabase.co"
+
+# Los secretos no deben definirse aquí, sino a través de la línea de comandos o el dashboard
+
+# Configuración para el entorno de producción
+[env.production]
+vars = { SUPABASE_URL = "https://rpogrokqnyrauxkfwqil.supabase.co" }
+
+# Configuración para el entorno de desarrollo (opcional)
+[env.development]
+vars = { SUPABASE_URL = "https://rpogrokqnyrauxkfwqil.supabase.co" }
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "photos-ai-studio"
